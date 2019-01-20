@@ -12,6 +12,6 @@ block content
   ul
     each user in users
       li
-        span= user.name
-        span &nbsp;
+        span= user.name + "™"
+        span= user.phone
         a(href="/users/" + user.id) View
