@@ -1,14 +1,18 @@
-h1 Users
+html
+  head
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS", crossorigin="anonymous")
+  body
+    h1 Users
 
-a(href="/users/create") New
+    a(href="/users/create") New
 
-form(action="/users/search", method="GET")
-  input(type="text", name="q")
-  button Search
+    form(action="/users/search", method="GET")
+      input(type="text", name="q")
+      button Search
 
-ul
-  each user in users
-    li
-      span= user.name
-      span &nbsp;
-      a(href="/users/" + user.id) View
+    ul
+      each user in users
+        li
+          span= user.name
+          span &nbsp;
+          a(href="/users/" + user.id) View
