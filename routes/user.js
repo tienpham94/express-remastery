@@ -11,6 +11,11 @@ router.get('/', (req, res) => {
   })
 })
 
+router.get('/cookie', (req, res, next) => {
+  res.cookie('user-id', 12345)
+  res.send('cookie route')
+})
+
 router.get('/create', (req, res) => {
   res.render("users/create")
 })
